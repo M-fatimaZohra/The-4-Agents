@@ -9,7 +9,15 @@ while True:
         break
 
     chat_history.append({"role": "user", "content": prompt })
+
     result = Runner.run_sync(Weather_agent, chat_history)
     chat_reply = result.final_output
     print(chat_reply)
+
     chat_history.append({"role": "assistant", "content": chat_reply })
+
+
+
+
+
+
